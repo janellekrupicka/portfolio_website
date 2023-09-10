@@ -1,0 +1,42 @@
+.btn_con {
+    display: flex;
+    align-self: flex-start;
+}
+.main_btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 2px solid #8AB7EA;
+    display: flex;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.main_btn .btn_text {
+    padding: 0 2rem;
+}
+.main_btn .btn_icon {
+    background-color: #8AB7EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+}
+.main_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+    z-index: -1;
+}
+.main_btn:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: #8AB7EA;
+    transform: translateX(0);
+}

@@ -1,11 +1,25 @@
 import type { NextPage } from "next";
+import Header from '../components/Header';
+import Image from 'next/image';
+import Download from '../components/Download';
+import Home from '../components/Home';
+import About from '../components/About';
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
 
-const Home: NextPage = () => {
+
+const Main: NextPage = () => {
   return (
-    <div className="container mx-auto">
-      <h1 className="text-4xl">NextJS + TailwindCSS Starter </h1>
+    <div className="container">
+      <Header />
+      <div className="container md:mx-auto my-auto">
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Main;
